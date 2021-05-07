@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = function (plop) {
     // controller generator
     plop.setGenerator('controller', {
