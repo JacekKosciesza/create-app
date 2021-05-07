@@ -7,7 +7,7 @@
     "create-app": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "plop"
   },
   "repository": {
     "type": "git",
@@ -19,10 +19,8 @@
     "url": "https://github.com/JacekKosciesza/create-app/issues"
   },
   "homepage": "https://github.com/JacekKosciesza/create-app#readme",
-  "devDependencies": {
-    "plop": "^2.7.4"
-  },
+  "preferGlobal": true,
   "dependencies": {
-    "node-plop": "^0.26.2"
+    "plop": "^2.7.4"
   }
 }
