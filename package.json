@@ -1,0 +1,25 @@
+{
+  "name": "plopx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "plopx": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacekKosciesza/plop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacekKosciesza/plop/issues"
+  },
+  "homepage": "https://github.com/JacekKosciesza/plop#readme",
+  "devDependencies": {
+    "plop": "^2.7.4"
+  }
+}
