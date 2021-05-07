@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = function (plop) {
     // controller generator
     plop.setGenerator('controller', {
@@ -10,7 +12,7 @@ module.exports = function (plop) {
         actions: [{
             type: 'add',
             path: 'src/{{name}}.js',
-            templateFile: 'templates/controller.hbs'
+            templateFile: path.join(__dirname, "/templates/controller.hbs")
         }]
     });
 };
