@@ -21,5 +21,8 @@
   "homepage": "https://github.com/JacekKosciesza/create-app#readme",
   "devDependencies": {
     "plop": "^2.7.4"
+  },
+  "dependencies": {
+    "node-plop": "^0.26.2"
   }
 }
