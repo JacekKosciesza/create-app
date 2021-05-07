@@ -1,24 +1,24 @@
 {
-  "name": "plopx",
+  "name": "create-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "plopx": "./index.js"
+    "create-app": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JacekKosciesza/plop.git"
+    "url": "git+https://github.com/JacekKosciesza/create-app.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JacekKosciesza/plop/issues"
+    "url": "https://github.com/JacekKosciesza/create-app/issues"
   },
-  "homepage": "https://github.com/JacekKosciesza/plop#readme",
+  "homepage": "https://github.com/JacekKosciesza/create-app#readme",
   "devDependencies": {
     "plop": "^2.7.4"
   }
