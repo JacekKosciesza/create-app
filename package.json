@@ -2,6 +2,7 @@
   "name": "create-app",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "bin": {
     "create-app": "./index.js"
