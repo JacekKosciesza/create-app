@@ -12,4 +12,10 @@ Plop.launch({
   completion: argv.completion
 // This will merge the `plop` argv and the generator argv.
 // This means that you don't need to use `--` anymore
-}, env => run(env, undefined, true));
+}, env => {
+    const options = {
+        ...env,
+        dest: process.cwd() // this will make the destination path to be based on the cwd when calling the wrapper
+    }
+    return run(options, undefined, true)
+});
