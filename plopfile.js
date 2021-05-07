@@ -16,11 +16,16 @@ module.exports = function (plop) {
             choices: ['Web', 'Mobile', 'Cloud']
         }],
         actions: (data) => {
+            data.web = data.types.includes('Web');
+            data.mobile = data.types.includes('Mobile');
+            data.cloud = data.types.includes('Cloud');
+
             const webActions = [
                 {
                     type: 'addMany',
                     destination: '.',
-                    templateFiles: 'templates/web/**/*'
+                    templateFiles: 'templates/web/**/*',
+                    globOptions: { dot: true }
                 },
             ];
 
@@ -30,14 +35,21 @@ module.exports = function (plop) {
                 {
                     type: 'addMany',
                     destination: '.',
-                    templateFiles: 'templates/cloud/**/*'
+                    templateFiles: 'templates/cloud/**/*',
+                    globOptions: { dot: true }
                 }
             ];
 
             let actions = [
-                ...data.types.includes('Web') ? webActions : [],
-                ...data.types.includes('Mobile') ? mobileActions : [],
-                ...data.types.includes('Cloud') ? cloudActions : []
+                {
+                    type: 'addMany',
+                    destination: '.',
+                    templateFiles: 'templates/*',
+                    globOptions: { dot: true }
+                },
+                ...data.web? webActions : [],
+                ...data.mobile ? mobileActions : [],
+                ...data.cloud ? cloudActions : []
             ];
 
             return actions;

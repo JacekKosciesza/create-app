@@ -1,0 +1,16 @@
+sonar.organization=TODO
+sonar.projectName={{kebabCase name}}
+sonar.projectKey={{kebabCase name}}
+sonar.host.url=https://sonarcloud.io
+
+sonar.projectBaseDir=./
+sonar.sourceEncoding=UTF-8
+
+# Sources
+sonar.sources=\
+{{#if web}}
+web/src,\
+{{/if}}
+{{#if cloud}}
+cloud/lib,\
+{{/if}}
