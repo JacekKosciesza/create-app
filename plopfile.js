@@ -2,17 +2,28 @@ const path = require('path');
 
 module.exports = function (plop) {
     // controller generator
-    plop.setGenerator('controller', {
-        description: 'application controller logic',
+    plop.setGenerator('web', {
+        description: 'Web application',
         prompts: [{
             type: 'input',
             name: 'name',
-            message: 'controller name please'
+            message: 'Web application name'
         }],
         actions: [{
-            type: 'add',
-            path: 'src/{{name}}.js',
-            templateFile: 'templates/controller.hbs'
-        }]
+            type: 'addMany',
+            destination: '.',
+            templateFiles: 'templates/web/public/*'
+        },
+        {
+            type: 'addMany',
+            destination: '.',
+            templateFiles: 'templates/web/src/*'
+        },
+        {
+            type: 'addMany',
+            destination: '.',
+            templateFiles: 'templates/web/*'
+        },
+    ]
     });
 };
