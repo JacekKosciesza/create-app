@@ -12,7 +12,7 @@ module.exports = function (plop) {
         actions: [{
             type: 'add',
             path: 'src/{{name}}.js',
-            templateFile: path.join(__dirname, "/templates/controller.hbs")
+            templateFile: 'templates/controller.hbs'
         }]
     });
 };
